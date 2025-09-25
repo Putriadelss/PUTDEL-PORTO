@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 182, 193, 0.9); /* pink transparan */
+  background: rgba(255, 182, 193, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: #ff69b4; /* hot pink */
+  color: #ff69b4;
 }
 
 /* Hero Section */
@@ -54,20 +54,22 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 60px 10%;
-  min-height: 200;
+  background: url("img/bg.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  gap: 20px;
 }
 
 .hero-text {
-  max-width: 100;
+  max-width: 100%;
 }
 
 .hero-text h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 15px;
 }
 
 .hero-text p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 25px;
   color: #555;
 }
@@ -88,28 +90,20 @@ body {
 }
 
 .hero-img img {
-  width: 500px;
-  min-height: 100vh;
-}
-
-.hero {
-  background: url("img/bg.jpg") no-repeat center center/cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 10%;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
 }
 
 /* About Section */
 #about {
-  background: #fff0f5; /* soft pink */
+  background: url("img/bg2.jpg") no-repeat center center/cover;
   padding: 100px 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
-  flex-wrap: wrap; /* biar responsif */
+  flex-wrap: wrap;
 }
 
 #about h2 {
@@ -126,7 +120,8 @@ body {
 }
 
 .about-img img {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
@@ -137,19 +132,15 @@ body {
 }
 
 .about-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 20px;
   color: #333;
 }
 
-#about {
-  background: url("img/bg2.jpg") no-repeat center center/cover;
-}
-
 /* Projects Section */
 #projects {
-  background: #ffe4ec; /* pink muda */
+  background: #ffe4ec;
   padding: 100px 10%;
 }
 
@@ -197,7 +188,7 @@ body {
 
 /* Contact Section */
 #contact {
-  background: #fff0f5; /* soft pink */
+  background: #7d4c5c;
   padding: 100px 10%;
   text-align: center;
 }
@@ -209,17 +200,88 @@ body {
 }
 
 .contact-info {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 2;
-  color: #333;
+  color: #fff;
 }
 
 .contact-info p {
   margin: 10px 0;
 }
 
-/* Dummy Section */
+/* General Section */
 section {
   padding: 80px 10%;
-  min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    margin-top: 20px;
+  }
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .navbar ul {
+    gap: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  #projects,
+  #about,
+  #contact {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-img img {
+    max-width: 200px;
+  }
+
+  #projects h2,
+  #about h2,
+  #contact h2 {
+    font-size: 1.8rem;
+  }
 }
